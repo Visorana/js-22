@@ -1,17 +1,5 @@
-export default function extractSpecialAttacks({ special }) {
-  const extractedAttacks = [];
-
-  special.forEach((attack) => {
-    const {
-      id, name, description = 'Описание недоступно', icon,
-    } = attack;
-    extractedAttacks.push({
-      id, name, description, icon,
-    });
-  });
-
-  return extractedAttacks;
-}
+export const extractSpecialAttacks = ({ special }) => special
+  .map((el) => ({ ...el, description: el.description || 'Описание недоступно' }));
 
 const character = {
   name: 'Лучник',

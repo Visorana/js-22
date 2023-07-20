@@ -1,4 +1,4 @@
-import extractSpecialAttacks from "../..";
+import { extractSpecialAttacks } from "../..";
 
 test('extractSpecialAttacks', () => {
   const character = {
